@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="in" oninput="test()" placeholder="Nhập tên ngôi sao">
+<h3 id="out"></h3>
+<script>
+    let star = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe","Regulus"];
+    let constellation = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major","Leo"];
+    let check = ""
+    let a = ""
+
+    function test() {
+        a = false;
+        check = document.getElementById("in").value;
+        console.log(check)
+        let i = 0
+        for (; i < star.length; i++) {
+            if (star[i].toUpperCase() == check.toUpperCase()) {
+                a = true;
+                break;
+            }
+        }
+        ;
+        if (a) {
+            document.getElementById("out").innerHTML = "Ngôi sao thuộc chòm sao "+constellation[i]
+        } else {
+            document.getElementById("out").innerHTML = "Không tìm thấy"
+        }
+    }
+
+
+</script>
+</body>
