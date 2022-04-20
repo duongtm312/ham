@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let text = prompt("Nhập");
+  function isPalindrome(text){
+      let arr= text.split("");
+      let x = true;
+      for (let i = 0; i < arr.length; i++) {
+          if (arr[i]!=arr[arr.length-i-1]){
+              x = false;
+          }
+      }
+      return x
+  }
+
+  console.log(isPalindrome(text));
+</script>
+</body>
+</html>
