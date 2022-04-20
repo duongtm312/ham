@@ -14,18 +14,26 @@ function load() {
 let name=""
 function addProduct(){
 name=document.getElementById("name").value
-    product.push(name)
-    display = "<table>"
-    load()
-    numBer()
+    if (name==""){
+        alert("Nhập lại")
+    }else {
+        product.push(name)
+        display = "<table>"
+        load()
+        numBer()
+        document.getElementById("name").value=""
+    }
+
 }
 function deleteProduct(value){
     value = parseInt(value)
 
-    for (let i = value; i < product.length-1; i++) {
-        product[i]=product[(i+1)]
-    }
-    product.pop()
+    // for (let i = value; i < product.length-1; i++) {
+    //     product[i]=product[(i+1)]
+    // }
+    // product.pop()
+    product.splice(value,1)
+    console.log(product)
     display = "<table>"
     load()
     numBer()
