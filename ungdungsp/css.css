@@ -1,0 +1,38 @@
+td{
+    width: 150px;
+    height: 50px;
+
+}
+th{
+    width: 400px;
+    height: 50px;
+}
+
+tr:nth-child(even) td{
+    background:gray ;
+}
+tr:nth-child(even) th{
+    background:gray;
+}
+#addbox{
+    width: 400px;
+    height: 50px;
+    background: gray;
+}
+
+
+button{
+    background: #00e600;
+    color:white;
+    height: 40px;
+    width: 60px;
+
+}
+#addbox input{
+
+    margin-left: 80px;
+}
+
+.full{
+    margin: auto;
+}
